@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- MyCSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Home</title>
+    
+
+</head>
+<body>
+    <!-- header -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">Biodata</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="home.html">Profile <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Portfolio
+                            </a>
+                            <div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="kalkuator.html">calculator</a>
+                              <a class="dropdown-item" href="Tabel.html">Data tabel</a>
+                          </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- content -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="text-center profile">
+            <div class="row ">
+                <div class="col">
+                    <img src="assets/img/Foto.jpg" class="card-img-top rounded-circle">
+                    <h1>Jell Duhalde Adji Nyoko</h1>
+                    <p>Designer | Game Dev | Videographer</p>
+                </div>
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="3000">
+            <img src="assets/img/slide1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-interval="3000">
+            <img src="assets/img/slide2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-interval="3000">
+            <img src="assets/img/slide3.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+    </div>
+    <section class="about text-center" id="about">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-8 ">
+                    <h1>
+                        About
+                    </h1>
+                    <hr>
+                </div>
+                <div class="col-8 ">
+                    <p>perkenalkan nama lengkap saya jell duhalde adji nyoko biasa di panggil jell.</br>
+                        saya lahir pada tanggal 4 juni 1994 di waikabubak, sumba barat, nusa tenggara timur. <br>
+                        saya sudah lulus S1 sistem komputer di STMIK STIKOM Bali, sekarang saya sedang bekerja disalah satu IPS Bali. <br>
+                        saya senang bermain game khususnya moba, biasanya sya bermain game dota 2 jika ada waktu luang. <br>
+                        inilah sedikit cerita tentang saya. terima kasih.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact text-center" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <h1>
+                        Contact Me
+                    </h1>
+                    <hr>
+                </div>
+                <div class="col-8 margincm">
+                    <div class="fb">
+                        <a href="https://www.facebook.com/jell.nyoko"><img src="assets/img/facebook.png" class="imgsosial card-img-top rounded-circle"> Jell Nyoko</a>
+                    </div>
+                    <div class="ig">
+                        <a href="https://www.instagram.com/jellnyoko"><img src="assets/img/instagram.png" class="imgsosial card-img-top rounded-circle"> @jellnyoko</a>
+                    </div>
+                </div>
+                <div class="col-8 mt-5 mb-3">
+                    <h5>Anda dapat kirim pesan ke saya </br>
+                    dengan klik tombol pesan </br>
+                    Terima Kasih
+                    </h3>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Pesan
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Pesan Anda</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="https://formspree.io/dotadeso@gmail.com" method="POST">
+                                        <div class="form-group">
+                                            <label for="nama">Nama</label>
+                                            <input type="text" class="form-control" id="nama" placeholder="Masukan Nama" name="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email address</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="textpesan">Tuliskan Pesan Anda</label>
+                                            <textarea type="text" class="form-control" id="textpesan" placeholder="Pesan Anda" rows="3" name="pesan"></textarea>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
+                                            <button type="submit" class="btn btn-primary" >Kirim</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="text-center">
+            <h5>by JellNyoko <i class="fas fa-chess-king"></i></h5>
+        </div>
+    </footer>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
