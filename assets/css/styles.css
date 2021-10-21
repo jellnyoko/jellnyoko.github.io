@@ -1,0 +1,103 @@
+body{
+    font-family: 'Bangers', cursive;
+}
+
+.profile{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+    max-height: 75%;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 5%;
+    padding-left: 0px;
+    border-radius: .3rem;
+}
+
+.profile img{
+    width: 25%;
+    border: 5px solid rgb(100, 100, 240);
+}
+.profile img:hover{ 
+    border: 5px solid rgb(35, 35, 155);
+}
+
+section {
+    min-height: 450px;
+}
+hr {
+    width: 200px;
+    border-bottom: 3px solid rgb(5, 5, 150);
+    margin: 0px auto 25px;
+}
+.about{
+    padding-top: 50px; 
+}
+.contact {
+    padding-top: 50px; 
+    background-color: #eee;
+}
+.margincm{
+    margin-top: 20px;
+}
+.dropdown-item:hover{
+    background-color: #006fe6;
+}
+a:hover{
+    text-decoration: none;
+}
+.imgsosial{
+    width: 25px;
+    margin-right: 10px;
+}
+.imgsosial:hover{
+    width: 50px; 
+}
+.fb{
+    margin-bottom: 25px;
+}
+footer{
+    color: rgb(93, 0, 180);
+    background-color: rgb(100, 100, 240);
+    min-height: 50px;
+    padding-top: 20px;
+}
+footer h5{
+    font-size: 10px;
+}
+.kalkulator {
+    margin-top: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 310px;
+    min-height: 50px;
+    background-color: rgb(150, 150, 240);
+    border-radius: 3px;
+}
+.textinput {
+    border-radius: 0px;
+    width: 100%;
+    text-align: right
+}
+.btn {
+    border: 0px solid transparent;
+    border-radius: 0px;
+    width: 70px;
+    height: 70px;
+}
+.martop{
+    margin-top: 50px;
+}
+
+

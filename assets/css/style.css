@@ -1,0 +1,23 @@
+body {
+    background-color: lightgrey;
+}
+.container {
+    margin-top: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 310px;
+    min-height: 50px;
+    background-color: rgb(150, 150, 240);
+    border-radius: 3px;
+}
+.textinput {
+    border-radius: 0px;
+    width: 100%;
+    text-align: right
+}
+.container .btn {
+    border: 0px solid transparent;
+    border-radius: 0px;
+    width: 70px;
+    height: 70px;
+}

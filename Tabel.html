@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Data</title>
+  </head>
+  <body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">Biodata</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="home.html">Profile <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Portfolio
+                            </a>
+                            <div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="kalkuator.html">calculator</a>
+                                <a class="dropdown-item" href="#">Data tabel</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mb-3" style="margin-top: 70px;">
+        <div class="row justify-content-end">
+          <div class="col-4">
+            <div class="input-group">
+              <input id="data-filter" type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="
+              Cari sesuatu">
+              <div class="input-group-append">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter</button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#" onclick="filterData('nama')">Nama</a>
+                  <a class="dropdown-item" href="#" onclick="filterData('rp')">Rotation Period</a>
+                  <a class="dropdown-item" href="#" onclick="filterData('diameter')">Diameter</a>
+                  <a class="dropdown-item" href="#" onclick="filterData('population')">Population</a>
+                  <a class="dropdown-item" href="#" onclick="filterData('semua')">Semua</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+              <button onclick="sortbyname()" class="btn btn-dark" type="button" id="button1" value="true">Sort Nama</button>
+          </div>
+        </div>
+    </div>
+    <table class="table table-striped text-center table-bordered table-sm">
+        <thead class="table-dark">
+            <tr>
+                <th class="align-middle" scope="col"="col">#</th>
+                <th class="align-middle" scope="col"="col">Name</th>
+                <th class="align-middle" scope="col"="col">Rotation Period</th>
+                <th class="align-middle" scope="col"="col">Orbital Period</th>
+                <th class="align-middle" scope="col"="col">Diameter</th>
+                <th class="align-middle" scope="col"="col">Climate</th>
+                <th class="align-middle" scope="col"="col">Gravity</th>
+                <th class="align-middle" scope="col"="col">Terrain</th>
+                <th class="align-middle" scope="col"="col">Surface Water</th>
+                <th class="align-middle" scope="col"="col">Population</th>
+                <th class="align-middle" scope="col"="col">Residents</th>
+                <th class="align-middle" scope="col"="col">Films</th>
+                <th class="align-middle" scope="col"="col">Created</th>
+                <th class="align-middle" scope="col"="col">Edited</th>
+                <th class="align-middle" scope="col"="col">URL</th>
+              </tr>
+        </thead>
+        <tbody id="data-tabel">
+        </tbody>
+      </table>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/js/data.js"></script>
+</body>
+  <script>
+    var res = dataT.results;
+    ambilData();
+    function ambilData(){
+      document.getElementById("data-tabel").innerHTML ="";
+      var i = 1;
+      res.forEach(function(dataLoop){
+        var datares = "";
+        var datafilm = "";
+          dataLoop.residents.forEach(function(datar){
+            datares += "<li>"+ datar+"</li>";
+          });
+          dataLoop.films.forEach(function(dataf){
+            datafilm += "<li>"+dataf+"</li>";
+          });
+          document.getElementById("data-tabel").innerHTML += `
+          <tr>
+            <th class="align-middle" scope="row">`+(i++)+`</th>
+            <td class="align-middle">`+dataLoop.name+`</td>
+            <td class="align-middle">`+dataLoop.rotation_period+`</td>
+            <td class="align-middle">`+dataLoop.orbital_period+`</td>
+            <td class="align-middle">`+dataLoop.diameter+`</td>
+            <td class="align-middle">`+dataLoop.climate+`</td>
+            <td class="align-middle">`+dataLoop.gravity+`</td>
+            <td class="align-middle">`+dataLoop.terrain+`</td>
+            <td class="align-middle">`+dataLoop.surface_water+`</td>
+            <td class="align-middle">`+dataLoop.population+`</td>
+            <td class="align-middle"><ul>`+datares+`</ul></td>
+            <td class="align-middle"><ul>`+datafilm+`</ul></td>
+            <td class="align-middle">`+dataLoop.created+`</td>
+            <td class="align-middle">`+dataLoop.edited+`</td>
+            <td class="align-middle">`+dataLoop.url+`</td>
+          </tr>
+          `
+      });
+    }
+    function sortbyname(){
+      var nilai = document.getElementById('button1');
+      if(nilai.value == "true" ){
+        res.sort(function(a, b){
+          var x = a.name;
+          var y = b.name;
+          if (x < y) {return -1;}
+          if (x > y) {return 1;}
+          return 0;
+        });
+        ambilData();
+        nilai.value = "false";
+      }
+      else{
+        res.sort(function(a, b){
+          var x = a.name;
+          var y = b.name;
+          if (x > y) {return -1;}
+          if (x < y) {return 1;}
+          return 0;
+        });
+        ambilData();
+        nilai.value = "true";
+      }
+    }
+    console.log(res);
+    function getData(cari, datapilihan, data){
+      if(datapilihan == cari.value.trim()){
+        res.push(data);
+      }else if (cari.value.trim() == ""){
+        res = dataT.results;
+      }
+      ambilData();
+    }
+    function filterData(pilihan){
+      res = [];
+      resfil= dataT.results;
+      var cari = document.getElementById('data-filter'); 
+      resfil.forEach(function(data){
+        datapilihan = {nama:data.name, rp:data.rotation_period, diameter:data.diameter, population:data.population};
+        getData(cari, datapilihan[pilihan], data);
+        if(pilihan == "semua"){
+          res = dataT.results;
+        }
+      });
+    }
+  </script>
+</html>
